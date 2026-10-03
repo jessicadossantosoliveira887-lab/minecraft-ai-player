@@ -6,7 +6,7 @@ const { pathfinder, goals } = require('mineflayer-pathfinder');
 const config = {
   host: process.env.HOST || 'localhost',
   port: Number(process.env.PORT || 25565),
-  username: process.env.USERNAME || 'BotIA',
+  username: process.env.USERNAME || 'sayori',
   password: process.env.PASSWORD || '',
   version: process.env.VERSION || '1.20.4',
   auth: process.env.AUTH_TYPE || 'offline',
@@ -61,8 +61,8 @@ function stopMovement() {
 }
 
 bot.on('spawn', () => {
-  logMensagem(`Conectado ao servidor ${config.host}:${config.port}`);
-  bot.chat('Olá! Eu sou um bot IA. Digite !help para ver os comandos.');
+  logMensagem(`Conectado ao servidor ${config.host}:${config.port} como ${bot.username}`);
+  bot.chat('Olá! Eu sou a Sayori. Digite !help para ver os comandos.');
   startWanderMode();
 });
 
@@ -125,7 +125,7 @@ bot.on('chat', (username, message) => {
   }
 
   if (texto.toLowerCase().includes('oi') || texto.toLowerCase().includes('olá')) {
-    bot.chat(`Oi ${username}! Eu sou o bot IA deste servidor.`);
+    bot.chat(`Oi ${username}! Eu sou a Sayori.`);
     return;
   }
 });
