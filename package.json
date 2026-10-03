@@ -1,0 +1,24 @@
+{
+  "name": "minecraft-ai-player",
+  "version": "1.0.0",
+  "description": "Bot IA para Minecraft usando Mineflayer",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "node --watch bot.js"
+  },
+  "keywords": [
+    "minecraft",
+    "bot",
+    "ai",
+    "mineflayer"
+  ],
+  "author": "jessicadossantosoliveira887-lab",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mineflayer": "^4.21.0",
+    "mineflayer-pathfinder": "^2.0.0",
+    "vec3": "^0.1.7"
+  }
+}
